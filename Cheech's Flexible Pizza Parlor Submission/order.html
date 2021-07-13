@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Cheech's Flexible Pizza Parlor</title>
+    <!--
+    This is for the order page of the website
+    Chad Coburn, 7-6-2021
+    A website for the Cheech's Flexible Pizza Parlor assignment submission in CIS-130
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+  <div class="container">
+
+      <!-- This is the section for the header of the page, at the top of the webpage -->
+      <header>
+        <h1>Cheech's Flexible Pizza Parlor</h1>
+      </header>
+
+
+      <nav class="navbox">
+        <ul>
+          <li><a href="order.html">Order Online</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li>Home</li>
+          <li>Our Location</li>
+        </ul>
+      </nav>
+
+
+      <!-- Section 1 of the webpage. These are columns showing the details and photos about the chosen location -->
+
+      <h2>Order up!</h2>
+
+      <div class="flex-layout">
+        <div class="column-box">
+          <div class="column">
+            <form method="get" action="thankyou.html">
+              <fieldset>
+                <label for="FirstName">
+                  Customer First Name:
+                  <input autofocus type="text" name="First Name" id="FirstName" required placeholder="FirstName"/>
+                </label>
+                <label for="LastName">
+                  Customer Last Name:
+                  <input type="text" name="Last Name" id="LastName" required placeholder="LastName"/>
+                </label>
+                <label for="Phone">
+                  Customer Phone Number
+                  <input type="text" name="Phone" id="Phone" required placeholder="Phone"/>
+                </label>
+                <label for="pizza-choice">
+                  <select name="pizza-choice" id="pizza-choice">
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="cheese">Cheese</option>
+                    <option value="supreme">Supreme</option>
+                    <option value="meat-lover">Meat Lover's</option>
+                    <option value="sausage">Sausage</option>
+                    <option value="hawaiian">Hawaiian</option>
+                  </select>
+                </label>
+                <label for="days">
+                  # of Pizzas to order
+                  <input type="number" id="days" name="days" min="1" max="31">
+                </label>
+                <input type="submit" value="Submit"/>
+              </fieldset>
+            </form>
+          </div>
+        <div class="column">
+          <h3>Customer Reviews:</h3><br>
+          <p>"Cheech's pizzaria was the greatest experience that I ever had! I highly reccommend to anyone in the know!"
+          <em>-Samuel Rogers, Anywhere Tribune</em>
+          </p>
+          <br>
+          <p>Follow us on Twitter @CheechPizzaParlor_Official</p> <img src="tweet.png" alt="twitter logo">
+          <br>
+          <p>Check out our Facebook page for all kinds of news, deals, events, and posts with our community! <img src="facebook.png" alt="facebook logo">
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+
+</html>

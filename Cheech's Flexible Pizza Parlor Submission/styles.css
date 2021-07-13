@@ -1,0 +1,246 @@
+
+/*
+This is for the stylesheet of the website
+Chad Coburn, 7-6-2021
+A website for the Cheech's Flexible Pizza Parlor assignment submission in CIS-130
+*/
+
+
+
+/*
+Pizza themed color palette:
+- pizza crust = #dba24a ---- for borders around elements, like the crust on a pizza
+- melty cheese = #e1d800
+- pepperoni = #ce0000 ----
+- sausage = #6c5235
+- green pepper = #485D17
+- pizza sauce = #b21807
+
+/*
+Section of the CSS where I go through the webpage design for both pages, basic visuals
+*/
+
+html{
+  border: 3px solid #dba24a;
+  background-image: url("background.jpg");
+}
+
+body{
+  background-color: #b21807;
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  color: red;
+  border: 6px solid #dba24a;
+  box-shadow: 5px 5px 30px #485D17;
+}
+
+header{
+  font-size: 20pt;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  border: 5px solid #dba24a;
+  border-radius: 20px;
+  color: #485D17;
+  text-align: center;
+  text-shadow: 2pt 2pt white;
+  text-decoration: overline;
+  text-decoration: underline;
+  background-image: url("pepperoni-pizza.jpg");
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+  font-family: Arial, sans-serif;
+}
+
+footer{
+  border-top: 2px solid #dba24a;
+}
+
+img{
+  height: 350px;
+  width: 350px;
+  border: 2px solid #dba24a;
+  border-radius: 50px;
+}
+
+/*
+Section where the nav panel is set up, also to have elements that are links but that we aren't doing
+for this assignment.
+*/
+
+.navbox ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 200px;
+  background-color: grey;
+  border: 4px solid #b21807;
+}
+
+.navbox li{
+  border-bottom: 4px solid #b21807;
+  display: block;
+  padding: 8px 16px;
+  background-color: #e1d800;
+  color: #ce0000;
+  text-decoration: none;
+  font-style: normal;
+  text-shadow: 1px 1px black;
+}
+
+.navbox li a{
+  display: block;
+  padding: 8px 16px;
+  background-color: #e1d800;
+  color: #ce0000;
+  text-decoration: none;
+  font-style: normal;
+  text-shadow: 1px 1px black;
+}
+
+.navbox li a:hover {
+  background-color: ivory;
+}
+
+.navbox li a:active {
+  background-color: ivory;
+}
+
+/*
+This section is for the design of the order form to order the pizza from the website
+*/
+
+form {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px white;
+  color: black;
+  background-color: #485D17;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px dotted #6c5235;
+  background-color: ivory;
+}
+
+input[type=number] {
+  width: 92%;
+  padding: 16px 20px;
+  border: 1px dotted #6c5235;
+  background-color: ivory;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px dotted #6c5235;
+  background-color: ivory;
+}
+
+/*
+This section is dedicated to getting all of the materials set up and ordered by the flexboxes instead of floats as before.
+*/
+
+.container{
+  max-width: 750px;
+  margin: 20px auto 0 auto;
+  padding: 30px;
+}
+
+.flex-layout {
+  padding: 25px 50px;
+  display: flex;
+  align-items: stretch;
+}
+
+.column-box {
+	padding:20px;
+	border: 2px solid #dba24a;
+  border-radius: 20px;
+	background-color: #e1d800;
+  margin-right: 20px;
+}
+
+.column {
+  flex: 1 130px;
+  padding: 20px;
+	border: 2px solid #dba24a;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+	background-color: ivory;
+	margin-right: 20px;
+}
+
+.column p{
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  font-weight: lighter;
+  color: #6c5235;
+}
+
+.column img{
+  height: 25px;
+  width: 25px;
+}
+
+.fixed-column-box {
+  max-width: 1250px;
+  margin: 40px auto 0 auto;
+  background-color: ivory;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  padding: 25px 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.fixed-column {
+  border: 2px solid #dba24a;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+  flex: 1 130px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.fixed-column p{
+  font-family: Arial, sans-serif;
+  font-size: 14pt;
+  font-weight: lighter;
+  color: #6c5235;
+}
+
+/*
+This section is for having the flexbox content stack on top of one another at a certain viewport.
+Essentially, this is for the mobile version of the site.
+*/
+
+@media only screen and (max-width: 568px) {
+  .flex-container{display:block;}
+	.column{width:100%;}
+  .fixed-column{width: 100%;}
+}
